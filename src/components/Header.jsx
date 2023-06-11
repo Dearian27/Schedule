@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { logOut } from "../redux/features/userSlice";
 import { useNavigate } from "react-router-dom";
+import Logo from '../assets/logo.png';
 
 const Header = () => {
   const { isAuth } = useSelector(state => state.user);
@@ -14,7 +15,7 @@ const Header = () => {
 
   return (
     <div className="logo">
-      <img src="img/logo.png" alt="logo" width={230} height={213}/>
+      <img src={Logo} alt="logo" width={230} height={213}/>
       {isAuth &&
       <button className="btn" onClick={handleLogOut}>
         Вийти

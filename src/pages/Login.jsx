@@ -6,6 +6,7 @@ import { Triangle } from 'react-loader-spinner'
 import { useState } from "react";
 import { setAuth, setUserStatus } from "../redux/features/userSlice";
 import { useDispatch } from "react-redux";
+import loginImg from '../assets/img1.png';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -51,7 +52,7 @@ const Login = () => {
           <form onSubmit={submitForm}>
             <h1>Увійти</h1>
             <div className="loginFields">
-              <img src="/img/img1.png" alt="img" />
+              <img src={loginImg} alt="img" />
               <div className="loginInputs">
                 <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" name="login" placeholder="Username" />
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Password" />
