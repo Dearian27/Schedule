@@ -43,8 +43,9 @@ const Home = () => {
     const fetchGroups = async () => {
       try {
         setIsLoading(true);
-        const {data} = await axios.get(`/groups`);
-        setGroups(data);
+        const res = await axios.get(`/groups`);
+        console.log(res);
+        setGroups(res.data);
         setIsLoading(false);
       }
       catch(error) {
